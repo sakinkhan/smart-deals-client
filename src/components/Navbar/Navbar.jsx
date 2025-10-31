@@ -1,28 +1,64 @@
 import React from "react";
 import { NavLink } from "react-router";
+import "../Navbar/Navbar.css";
 
 const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink>Home</NavLink>
+        <NavLink
+          to={"/"}
+          className={({ isActive }) =>
+            isActive ? "nav-link nav-link-active" : "nav-link"
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink>All Products</NavLink>
+        <NavLink
+          to={"/allProducts"}
+          className={({ isActive }) =>
+            isActive ? "nav-link nav-link-active" : "nav-link"
+          }
+        >
+          All Products
+        </NavLink>
       </li>
       <li>
-        <NavLink>My Products</NavLink>
+        <NavLink
+          to={"/myProducts"}
+          className={({ isActive }) =>
+            isActive ? "nav-link nav-link-active" : "nav-link"
+          }
+        >
+          My Products
+        </NavLink>
       </li>
       <li>
-        <NavLink>My Bids</NavLink>
+        <NavLink
+          to={"/myBids"}
+          className={({ isActive }) =>
+            isActive ? "nav-link nav-link-active" : "nav-link"
+          }
+        >
+          My Bids
+        </NavLink>
       </li>
       <li>
-        <NavLink>Create Product</NavLink>
+        <NavLink
+          to={"/createProduct"}
+          className={({ isActive }) =>
+            isActive ? "nav-link nav-link-active" : "nav-link"
+          }
+        >
+          Create Product
+        </NavLink>
       </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-white shadow-sm px-20">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
